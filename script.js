@@ -6,14 +6,16 @@
 
 
 gtl = gsap.timeline()
-
+gtl.to("#loader",{
+    display:"block"
+})
 gtl.from(".line h1", {
     y: 150,
     stagger: 0.25,
     duration: 0.6,
     delay: 0.5
 })
-gtl.from(".line1-left, .line h2",{
+gtl.from(".line1-left",{
     opacity: 0,
     duration: 0.3,
     onStart: function () {
@@ -31,11 +33,29 @@ gtl.from(".line1-left, .line h2",{
     }
 })
 
+gtl.to(".line3 h2", {
+    animationName: "anime",
+    opacity:1
+})
+
 gtl.to("#loader", {
     opacity:0,
     duration:0.4,
     delay:4
 })
+
+gtl.from("#page1",{
+    delay: 0.2,
+    y:"100vh",
+    opacity:0,
+    duration: 0.5,
+    ease:Power4
+})
+gtl.to("#loader", {
+   display:"none"
+})
+
+
 
 
 
