@@ -47,6 +47,11 @@ function loadingAnimation() {
   gtl.to("#loader", {
     display: "none",
   });
+  gtl.from(".hero-line h1",{
+    y: 150,
+    stagger:0.2,
+    delay: -0.5
+  })
 }
 
 
