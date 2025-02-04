@@ -12,20 +12,27 @@ html, body{
 }
 
 
-
+body{
+    cursor: none;
+}
 #crsr{
     position: fixed;
-    z-index: 99;
+    z-index: 999;
     height: 2.5vw;
     width: 2.5vw;
     border: 1px solid rgba(255, 255, 255, 0.66);
     border-radius: 50%;
     mix-blend-mode: difference;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
-
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
 }
 #loader{
     width: 100%;
@@ -98,6 +105,7 @@ html, body{
     height: 100vh;
     width: 100%;
     background-color: #151515;
+    display: none;
 }
 
 #page1 nav{
@@ -109,6 +117,9 @@ html, body{
 
 #page1 nav .logo{
     width: 75px;
+    margin: 0;
+    padding: 0;
+    border: none;
 }
 
 nav ul li a{
@@ -135,15 +146,36 @@ nav ul li{
     width: fit-content;
     overflow-y: hidden;
 }
-#page1 .hero .hero-line h1{
+#page1 .hero .hero-line h1, #page1 .hero .hero-line span{
     font-size: 7.3vw;
     font-family: 'Plain';
     font-weight: 500;
     text-transform: uppercase;
-    margin: -0.75vw 0;
+    margin-top: -1.5vw;
     padding: 0;
 }
 
+#page1 .hero .hero-line span{
+    width: fit-content;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 0.5vw;
+    transition: all linear 200ms;
+    -webkit-transition: all linear 200ms;
+    -moz-transition: all linear 200ms;
+    -ms-transition: all linear 200ms;
+    -o-transition: all linear 200ms;
+}
+#page1 .hero .hero-line h1:nth-child(4){
+    
+}
+#page1 .hero .hero-line span:hover{
+    -webkit-text-stroke: 1px white;
+    color: transparent;
+    text-decoration: none;
+   
+   
+}
 @keyframes anime {
     0%{
         font-family: 'Plain Light';
@@ -151,7 +183,7 @@ nav ul li{
         font-weight: 900;
         opacity: 0;
     }
-    48%{
+    45%{
         font-family: 'Plain Light';
         color: white;
         font-weight: 900;

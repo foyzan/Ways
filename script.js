@@ -1,6 +1,6 @@
 function loadingAnimation() {
   gtl = gsap.timeline();
-  gtl.to("#loader", {
+  gtl.to("#loader, #page1", {
     display: "block",
   });
   gtl.from(".line h1", {
@@ -47,23 +47,24 @@ function loadingAnimation() {
   gtl.to("#loader", {
     display: "none",
   });
-  gtl.from(".hero-line h1",{
+  gtl.from(".hero-line h1", {
     y: 150,
-    stagger:0.2,
-    delay: -0.5
-  })
+    stagger: 0.2,
+    delay: -0.5,
+  });
 }
 
-
-function cusrEffect(){
-  document.addEventListener("mousemove", function(event){
+function cusrEffect() {
+  document.addEventListener("mousemove", function (event) {
     gsap.to("#crsr", {
-      left:event.x,
-      top:event.y
-    })
-  })
-  
-  Shery.makeMagnet(".logo, nav ul li");
+      left: event.x,
+      top: event.y,
+      duration: 0,
+    });
+  });
+
+  Shery.makeMagnet("nav ul li",{});
 }
-loadingAnimation()
-cusrEffect()
+
+loadingAnimation();
+cusrEffect();
