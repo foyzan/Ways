@@ -2,18 +2,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Plain Light';
-    color: #ffffff;
+    font-family: "Plain Light";
+    color: white;
 }
 
 html, body{
-    height: 100%;
     width: 100%;
+    height: 100%;
 }
 
-
 body{
-    cursor: none;
+    overflow-x: hidden;
 }
 #crsr{
     position: fixed;
@@ -34,80 +33,80 @@ body{
     -ms-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
 }
+
 #loader{
-    width: 100%;
     height: 100%;
+    width: 100%;
     position: fixed;
-    z-index: 999;
-    background-color:#0B0B0B;
-    padding: 15vh 8vw;
-    display: none;
-    cursor: none;
+    z-index: 9999;
+    background-color: #000000;
+    padding: 20vh 10vw;
 }
 
-.line{
-    margin: -1vw 0;
-    padding: 0;
+#loader .line{
+
     height: fit-content;
-    overflow-y: hidden;
+    overflow: hidden;
     display: flex;
-    align-items: start;
+    align-items: center;
     justify-content: flex-start;
-    gap: 1.3vw;
-
+    gap: 3vw;
 }
 
-.line1{
-    gap: 6.3vw;
-}
-
-.line .line1-left{
+#loader .line .line1-left{
     display: flex;
+    align-items: center;
     justify-content: center;
-    gap: 1vw;
-    padding: 0.3vw 0;
+    gap: 3vw;
 }
 
-.line .line1-left h5, .line .line1-left h6{
-    font-size: 3.3vw;
+#loader .line .line1-left h5, 
+#loader .line .line1-left h6{
+    font-size: 4vw;
     font-family: 'silk serif';
-    font-weight: 400;
-}
-.line .line1-left h5{
+    font-weight: 100;
+} 
+#loader .line .line1-left h5{
     width: 5vw;
     text-align: right;
 }
-.line h1{
-    font-size: 7vw;
-    font-weight: 900;
-    text-transform: uppercase;  
-}
-.line3{
-    align-items: center;
-}
-.line3 h2{
-    font-size: 7vw;
-    font-weight: 900;
+#loader .line h1{
     text-transform: uppercase;
-    height: 7vw;
+    font-size: 6.7vw;
+    font-weight: 500;
+
+}
+
+#loader .line{
+    height: fit-content;
+    position: relative;
+    overflow: hidden;
     display: flex;
     align-items: center;
+    justify-content: flex-start;
+    gap: 3vw;
+}
+#loader .line4 h2{
+    position: absolute;
     opacity: 0;
-    animation-duration: 2000ms;
+    right: 4vw;
+    font-size: 6.4vw;
+    text-transform: uppercase;
+    font-weight: 900;
+    animation-duration: 2s;
     animation-iteration-count: infinite;
 }
+
 #main{
     position: relative;
-    background-color: #111;
+    background-color: #151515;
 }
 
 #page1{
-    height: 100vh;
     width: 100%;
+    height: 100vh;
     background-color: #151515;
-    display: none;
 }
-
 #page1 nav{
     display: flex;
     align-items: center;
@@ -153,8 +152,14 @@ nav ul li{
     text-transform: uppercase;
     margin-top: -1.5vw;
     padding: 0;
+    word-spacing: -0.4vw;
 }
-
+ #page1 .hero .hero-line:nth-child(3) a{
+    text-decoration: none;
+ }
+ #page1 .hero .hero-line:nth-child(3) h1{
+    word-spacing: -1.2vw;
+ }
 #page1 .hero .hero-line span{
     width: fit-content;
     text-decoration: underline;
@@ -166,9 +171,7 @@ nav ul li{
     -ms-transition: all linear 200ms;
     -o-transition: all linear 200ms;
 }
-#page1 .hero .hero-line h1:nth-child(4){
-    
-}
+
 #page1 .hero .hero-line span:hover{
     -webkit-text-stroke: 1px white;
     color: transparent;
@@ -176,33 +179,182 @@ nav ul li{
    
    
 }
-@keyframes anime {
-    0%{
-        font-family: 'Plain Light';
+
+#page2{
+    width: 100%;
+    height: 100vh;
+    padding-top: 20vh;
+    position: relative;
+}
+#videoContainer{
+    width: 71.99%;
+    height: 67vh;
+    position: relative;
+    left: 28%;
+
+}
+
+#videoContainer video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#videoContainer img{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#videoCursor{
+    background-color: #FFA63D;
+    height: 10vw;
+    width: 10vw;
+    position: absolute;
+    top: -15%;
+    right: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+#videoCursor i{
+    font-size: 2vw;
+
+}
+
+
+#page3{
+    min-height: 100vh;
+    width: 100%;
+    background-color: black;
+    position: relative;
+}
+#page4{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    padding-right: 5.5vw;
+}
+
+.page4Container{
+    width: 70%;
+    position: relative;
+    margin-left: 30%;
+}
+
+
+.page4Container h1{
+    font-size: 7vw;
+    text-transform: uppercase;
+    
+}
+
+.page4Container .underline{
+    width: 100%;
+    height: 2px;
+    background-color: #8A8A8A;
+    margin-top: 5vw; 
+}
+
+.page4Container > p{
+    font-size: 2.25vw;
+    width: 50%;
+    margin: 3.5vw 0;
+}
+
+.page4Flex{
+    display: flex;
+}
+
+.page4Flex img{
+    width: 47%;
+}
+.page4Flex p{
+    width: 25%;
+    font-size: 1vw;
+}
+
+.blueBox{
+    width: 49%;
+    background-color: #3F7DF4;
+    position: relative;
+    padding: 3.8vw;
+    padding-bottom: 4.1vw;
+    margin-top: -30vh;
+    margin-left: 23vw;
+}
+
+.blueBox .blueBoxElem{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: left;
+    padding: 2vw 0;
+    border-bottom: 1px solid #fcfafa;
+    color: #FEFEFF;
+}
+
+.blueBox .blueBoxElem h4{
+    font-size: 1.5vw;
+    font-weight: 500;
+    width: 60%;
+}
+
+.blueBox .blueBoxElem p{
+    font-size: 0.98vw;
+    width: 40%;
+    font-weight: 500;
+}
+
+.underline2{
+    width: 100%;
+    height: 2px;
+    background-color:#fcfafa;
+    margin-top: 8vw; 
+}
+
+#page5{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    padding-right: 5.5vw;
+}
+@keyframes nowEffect {
+    0% {
+        font-family: "Plain Light";
+        -webkit-text-stroke: 1px white;
         color: white;
-        font-weight: 900;
-        opacity: 0;
-    }
-    45%{
-        font-family: 'Plain Light';
-        color: white;
-        font-weight: 900;
+        font-weight: 500;
         opacity: 1;
     }
-    50%{
-        font-family: 'silk serif';
+    48% {
+        font-family: "Plain Light";
         -webkit-text-stroke: 1px white;
+        color: white;
         font-weight: 500;
-        color: transparent;
         opacity: 0;
-        
     }
-    100%{
-        font-family: 'silk serif';
+    50% {
+        font-family: "silk serif";
         -webkit-text-stroke: 1px white;
-        font-weight: 500;
         color: transparent;
+        font-weight: 500;
+        opacity: 0;
+    }
+    100% {
+        font-family: "silk serif";
+        -webkit-text-stroke: 1px white;
+        color: transparent;
+        font-weight: 500;
         opacity: 1;
-        
     }
 }

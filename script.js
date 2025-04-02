@@ -1,57 +1,56 @@
 function loadingAnimation() {
-  gtl = gsap.timeline();
-  gtl.to("#loader, #page1", {
-    display: "block",
-  });
-  gtl.from(".line h1", {
+  const tl = gsap.timeline();
+
+  tl.from(".line h1", {
     y: 150,
     stagger: 0.25,
     duration: 0.6,
     delay: 0.5,
   });
-  gtl.from(".line1-left", {
+
+  tl.from("#loader .line .line1-left", {
     opacity: 0,
-    duration: 0.3,
-    onStart: function () {
-      const h5timer = document.querySelector(".line1-left h5");
-      let grow = 0;
-      let timer = setInterval(function () {
-        if (grow === 100) {
-          clearInterval(timer);
+    onStart: () => {
+      const loaderTimerH5 = document.querySelector(
+        "#loader .line .line1-left h5"
+      );
+      let time = 0;
+      const timerFunction = setInterval(() => {
+        if (time > 99) {
+          clearInterval(timerFunction);
         } else {
-          grow++;
-          h5timer.innerHTML = grow;
+          time++;
+          loaderTimerH5.textContent = time;
         }
       }, 40);
     },
   });
-
-  gtl.to(".line3 h2", {
-    animationName: "anime",
+  tl.to("#loader .line h2", {
     opacity: 1,
+    AnimationName: "nowEffect",
   });
-
-  gtl.to("#loader", {
+  tl.to("#loader", {
     opacity: 0,
-    duration: 0.4,
-    delay: 4,
-  });
-
-  gtl.from("#page1", {
-    delay: 0.2,
-    y: "100vh",
-    opacity: 0,
-    duration: 0.5,
-    ease: Power4,
-  });
-  gtl.to("#loader", {
+    duration: 0.6,
+    delay: 2,
     display: "none",
   });
-  gtl.from(".hero-line h1", {
-    y: 150,
-    stagger: 0.2,
-    delay: -0.5,
+  tl.from("#page1", {
+    opacity: 0,
+    y: 1800,
+    duration: 0.8,
+    ease: "power4",
+    delay: 0.2,
   });
+  tl.from("nav", {
+    opacity:0
+  })
+  tl.from("#page1 .hero .hero-line h1",{
+    y: 150,
+    stagger: 0.25,
+    duration: 0.4,
+    delay: 0.2,
+  })
 }
 
 function cusrEffect() {
@@ -63,7 +62,7 @@ function cusrEffect() {
     });
   });
 
-  Shery.makeMagnet("nav ul li",{});
+  Shery.makeMagnet("nav ul li", {});
 }
 
 loadingAnimation();
