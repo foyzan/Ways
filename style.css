@@ -326,8 +326,92 @@ nav ul li{
     min-height: 100vh;
     width: 100%;
     position: relative;
-    padding-right: 5.5vw;
 }
+
+
+#page5 h3{
+    margin-left: 28.4%;
+    font-weight: 500;
+    margin-top: 1.2vw;
+    font-size: 1vw;
+}
+
+#page5 #marquee{
+    margin-top: 6vw;
+}
+#page5 .elme{
+  white-space: nowrap;
+}
+
+#page5 .elme h1{
+    font-size: 7vw;
+    text-transform: uppercase;
+    -webkit-text-stroke: 1px white;
+    color: transparent;
+    font-weight: 300;
+    display: inline-block;
+    margin-right: 16px;
+    animation-name: marqueeEffect;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+#page5 .elme2{
+  white-space: nowrap;
+}
+
+#page5 .elme2 h1{
+    font-size: 7vw;
+    text-transform: uppercase;
+    -webkit-text-stroke: 1px white;
+    color: transparent;
+    font-weight: 300;
+    display: inline-block;
+    margin-right: 16px;
+    animation-name: marqueeEffect;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+    transform: translate(calc(-100% - 20px));
+    -webkit-transform: translate(calc(-100% - 20px));
+    -moz-transform: translate(calc(-100% - 20px));
+    -ms-transform: translate(calc(-100% - 20px));
+    -o-transform: translate(calc(-100% - 20px));
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @keyframes nowEffect {
     0% {
         font-family: "Plain Light";
@@ -357,4 +441,18 @@ nav ul li{
         font-weight: 500;
         opacity: 1;
     }
+}
+
+@keyframes marqueeEffect {
+   from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(calc(-100% - 20px));
+        -webkit-transform: translateX(calc(-100% - 20px));
+        -moz-transform: translateX(calc(-100% - 20px));
+        -ms-transform: translateX(calc(-100% - 20px));
+        -o-transform: translateX(calc(-100% - 20px));
+}
+
 }
