@@ -140,6 +140,16 @@ nav ul li{
     width: 72%;
     margin-left: 28%;
     margin-top: 16.8vh;
+    position: relative;
+}
+#page1 .hero::before{
+    content: "01";
+    font-size: 3.2vw;
+    position: absolute;
+    font-family: "silk serif";
+    font-weight: 100;
+    top:-3%;
+    left: -12.5%;
 }
 #page1 .hero .hero-line {
     width: fit-content;
@@ -255,6 +265,17 @@ nav ul li{
 .page4Container h1{
     font-size: 7vw;
     text-transform: uppercase;
+    position: relative;
+    
+}
+.page4Container h1::before{
+    content: "03";
+    font-size: 3.2vw;
+    position: absolute;
+    top:1.5%;
+    left: -15%;
+    font-family: "silk serif";
+    font-weight: 100;
     
 }
 
@@ -343,8 +364,19 @@ nav ul li{
     font-size: 7.4vw;
     text-transform: uppercase;
     font-weight: 600;
+    position: relative;
     
-    
+}
+
+#footer> h5::before{
+    content: "04";
+    font-size: 3.2vw;
+    position: absolute;
+    top:1.5%;
+    left: -15%;
+    font-family: "silk serif";
+    font-weight: 100;
+
 }
 
 #footer .footer-div{
