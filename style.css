@@ -202,6 +202,7 @@ nav ul li{
     position: relative;
     left: 28%;
 
+    background-image: url(https://obys.agency/wp-content/uploads/2022/11/Showreel-2022-preview-1.jpg);
 }
 
 #videoContainer video{
@@ -220,8 +221,8 @@ nav ul li{
 
 #videoCursor{
     background-color: #FFA63D;
-    height: 10vw;
-    width: 10vw;
+    height: 9vw;
+    width: 9vw;
     position: absolute;
     top: -15%;
     right: 30%;
