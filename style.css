@@ -346,7 +346,7 @@ nav ul li{
 
 
 #page5{
-    min-height: 100vh;
+    min-height: 110vh;
     width: 100%;
     position: relative;
 }
@@ -369,7 +369,7 @@ nav ul li{
 }
 
 #page5 .elme h1{
-    font-size: 8vw;
+    font-size: 7vw;
     text-transform: uppercase;
     -webkit-text-stroke: 1px white;
     color: transparent;
@@ -445,7 +445,6 @@ nav ul li{
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-
     padding-top: 5vw;
 }
 
